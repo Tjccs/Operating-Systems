@@ -26,6 +26,7 @@ def consumidor():
         tmp = outPosition
         nextConsumed = buffer[outPosition]
         outPosition = (outPosition + 1) % MAX_SIZE
+        print ("---Consumi " + str(nextConsumed))
         empty.release()
 
     time.sleep(random.randint(0,3)) #descanso um pouco
